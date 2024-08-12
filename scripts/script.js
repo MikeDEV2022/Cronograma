@@ -1,5 +1,11 @@
 document.addEventListener('DOMContentLoaded', function() {
     const daysInMonth = new Date(2024, 7, 0).getDate();
+    const dataAtual = new Date();
+    const options = { timeZone: 'America/Sao_Paulo' };
+    const dataHoraBrasil = dataAtual.toLocaleString('pt-BR', options);
+    const hora_final = dataHoraBrasil.replace(",", ":")
+    const data_side = document.getElementById("data")
+    data_side.innerHTML = `${hora_final}`
     const calendar = document.getElementById('calendar');
     const feedback = document.getElementById('feedback');
     const homeMessage = document.getElementById('home-message');
