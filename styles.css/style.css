@@ -5,21 +5,20 @@ body {
     background-color: #f4f4f4;
     color: #333;
     display: flex;
-    flex-flow: column;
-    height: 100%;
+    flex-direction: column;
+    min-height: 100vh; /* Adicionado para garantir que o corpo preencha a altura total da viewport */
 }
 
 header {
     background-color: #4CAF50;
     color: white;
-    padding: 15px 0;
+    padding: 15px 15px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 15px;
 }
 
-header nav{
+header nav {
     margin-right: 40px;
 }
 
@@ -36,6 +35,7 @@ header nav a:hover {
 
 main {
     padding: 20px;
+    flex: 1; /* Adicionado para garantir que o main preencha o espaço restante */
 }
 
 main section {
@@ -80,15 +80,16 @@ main section.active {
     font-size: 1.2em;
     color: #d32f2f;
 }
-#home-section{
-    height: 50%;
+
+#home-section {
+    height: auto;
 }
+
 footer {
     background-color: #4CAF50;
     color: white;
     text-align: center;
-    position: absolute;
-    bottom: 0;
+    padding: 5px 0;
     width: 100%;
     font-weight: bold;
 }
@@ -120,4 +121,26 @@ form button {
 
 form button:hover {
     background-color: #45a049;
+}
+
+/* Styles for the Study Schedule Section */
+.schedule {
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.schedule h3 {
+    color: #4CAF50;
+}
+
+.schedule ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.schedule li {
+    margin-bottom: 10px;
 }
